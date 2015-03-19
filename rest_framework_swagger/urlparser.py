@@ -43,7 +43,7 @@ class UrlParser(object):
         filtered_list = []
 
         for api in apis:
-            if filter_path in api['path'].strip('/'):
+            if '/' + filter_path in api['path']:
                 filtered_list.append(api)
 
         return filtered_list
